@@ -22,7 +22,7 @@ export default function Usuario() {
                 <strong>catanacomics</strong>
                 <span data-test="name">
                     {!user? "Catana":user}
-                    <ion-icon test="edit-name" onClick={change_user} name="pencil"></ion-icon>
+                    <ion-icon data-test="edit-name" onClick={change_user} name="pencil"></ion-icon>
                 </span>
             </div>
         </div>
