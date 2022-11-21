@@ -36,7 +36,7 @@ function Post(props){
         if(heart_type === "heart-outline" )
         {
             setHeart_type("heart")
-            setStyle_heart({color:"#ed4956"})
+            setStyle_heart({color:"#FF0000"})
             setLikes(likes + 1)
 
         }
@@ -53,7 +53,7 @@ function Post(props){
         if(heart_type === "heart-outline" )
         {
             setHeart_type("heart")
-            setStyle_heart({color:"#ed4956"})
+            setStyle_heart({color:"#FF0000"})
             setLikes(likes + 1)
 
         }
@@ -73,7 +73,7 @@ function Post(props){
                 </div>
 
                 <div class="conteudo">
-                    <img data-test="post-image" onClick={like_img} src={props.img2} />
+                    <img data-test="post-image" onDoubleClick={like_img} src={props.img2} />
                 </div>
 
                 <div class="fundo">
