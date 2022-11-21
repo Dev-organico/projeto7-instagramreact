@@ -21,8 +21,9 @@ export default function Posts() {
 function Post(props){
     let [mark_type , setIcon_type] = useState("bookmark-outline")
     let [heart_type , setHeart_type] = useState("heart-outline")
-    let [style_heart , setStyle_heart] =useState({color:"#000000"})
-    let [likes , setLikes] =useState(props.likes)
+    let [style_heart , setStyle_heart] = useState({color:"black"})
+    let [likes , setLikes] = useState(props.likes)
+    let [white_heart , setWhite_heart] = useState({display:"none"})
 
     function mark(){
         if (mark_type === "bookmark-outline")
@@ -36,13 +37,13 @@ function Post(props){
         if(heart_type === "heart-outline" )
         {
             setHeart_type("heart")
-            setStyle_heart({color:"#FF0000"})
+            setStyle_heart({color:"red"})
             setLikes(likes + 1)
 
         }
         else{
             setHeart_type("heart-outline")
-            setStyle_heart({color:"#000000"})
+            setStyle_heart({color:"black"})
             setLikes(likes - 1)
             
         }
@@ -53,8 +54,9 @@ function Post(props){
         if(heart_type === "heart-outline" )
         {
             setHeart_type("heart")
-            setStyle_heart({color:"#FF0000"})
+            setStyle_heart({color:"red"})
             setLikes(likes + 1)
+            setWhite_heart({display:"flex"})
 
         }
         
@@ -74,6 +76,12 @@ function Post(props){
 
                 <div class="conteudo">
                     <img data-test="post-image" onDoubleClick={like_img} src={props.img2} />
+                    <ion-icon
+                    
+                    style={white_heart}
+                    name="heart">
+
+                    </ion-icon>
                 </div>
 
                 <div class="fundo">

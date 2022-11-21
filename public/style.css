@@ -82,6 +82,8 @@ body {
   margin-top: 88px;
 }
 
+
+
 .esquerda {
   width: 100%;
   max-width: 614px;
@@ -308,6 +310,40 @@ body {
 
 .logo-mobile, .instagram-mobile {
   display: none !important;
+}
+
+.conteudo{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.conteudo ion-icon{
+  font-size: 128px;
+  position: absolute;
+  animation-name: ht;
+  animation-duration: 0.5s;
+  color: transparent;
+
+}
+
+@keyframes ht {
+ 
+    0%{
+      transform: scale(0.2);
+      color:white;
+    }
+    50% {
+      transform: scale(1);
+      color:white;
+    }
+    100% {
+      color:transparent;
+      display: flex;
+    }
+    
 }
 
 @media (max-width: 935px) {
